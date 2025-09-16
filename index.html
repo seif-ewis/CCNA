@@ -109,8 +109,6 @@
         #progress-bar {
             position: fixed; top: 0; left: 0; height: 4px; background-color: #00bceb; z-index: 50; transition: width 0.3s ease-out;
         }
-        .team-member { transition: transform 0.3s ease; }
-        .team-member:hover { transform: scale(1.05); }
         
         #quiz-modal {
             background-color: rgba(13, 17, 23, 0.8);
@@ -154,6 +152,12 @@
         .slide.active .chart-bar span {
             opacity: 1;
         }
+        .profile-pic {
+            transition: transform 0.4s ease-in-out;
+        }
+        .team-member:hover .profile-pic {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="overflow-hidden">
@@ -180,8 +184,11 @@
 
             <!-- Slide 1: Title -->
             <section id="slide-1" class="slide active">
-                <svg class="w-20 h-20 cisco-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <h1 class="text-5xl md:text-7xl font-black text-white mb-2">Cisco MUST Academy</h1>
+                <div class="flex items-center justify-center gap-8 md:gap-12 mb-8">
+                    <img src="assets/must3.png" alt="MUST University Logo" class="h-16 md:h-20">
+                    <img src="assets/cisco.png" alt="Cisco Networking Academy Logo" class="h-16 md:h-20">
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-2">MUST NetAcad </h1>
                 <p class="text-xl md:text-2xl font-light cisco-blue">Bridging the Gap Between Classroom and Career.</p>
             </section>
             
@@ -220,7 +227,7 @@
             <section id="slide-5" class="slide hidden-strict">
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Your Launchpad into Tech</h1>
                 <p class="max-w-3xl text-lg md:text-xl leading-relaxed mb-8">
-                    We are the official <span class="cisco-blue font-semibold">Cisco MUST Academy</span>—more than a club, we are a movement. A community of innovators, problem-solvers, and future tech leaders, powered by the world-class Cisco Networking Academy program. We give you the keys to the kingdom.
+                    We are the official <span class="cisco-blue font-semibold">MUST NetAcad</span>—more than a club, we are a movement. A community of innovators, problem-solvers, and future tech leaders, powered by the world-class Cisco Networking Academy program. We give you the keys to the kingdom.
                 </p>
             </section>
 
@@ -234,7 +241,7 @@
                         <div class="flex flex-col md:flex-row justify-center gap-8">
                             <div class="flex flex-col items-center text-center p-6 card max-w-lg">
                                 <div class="w-28 h-28 rounded-full border-4 border-cyan-400 flex items-center justify-center bg-gray-800 shadow-lg mb-3">
-                                   <span class="font-bold text-3xl text-cyan-400">CCNA</span>
+                                   <span class="font-bold text-3m text-cyan-400">Network Essential</span>
                                 </div>
                                 <h3 class="font-bold text-xl">Networking Foundation</h3>
                                 <p class="text-gray-400 mt-1">Master the fundamentals of routing, switching, and IP connectivity.</p>
@@ -265,10 +272,31 @@
                             </div>
                             <div class="flex flex-col items-center text-center">
                                 <div class="w-24 h-24 rounded-full border-2 border-gray-600 flex items-center justify-center bg-gray-800 mb-2 relative">
-                                   <span class="font-bold text-xl">DevNet</span>
+                                   <span class="font-bold text-xl">CCNA</span>
                                    <svg class="w-6 h-6 absolute text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
                                 </div>
-                                <h3 class="font-bold text-lg">Automation</h3>
+                                <h3 class="font-bold text-lg">Network</h3>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-24 h-24 rounded-full border-2 border-gray-600 flex items-center justify-center bg-gray-800 mb-2 relative">
+                                   <span class="font-bold text-xl">Linux</span>
+                                   <svg class="w-6 h-6 absolute text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <h3 class="font-bold text-lg">Cli</h3>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-24 h-24 rounded-full border-2 border-gray-600 flex items-center justify-center bg-gray-800 mb-2 relative">
+                                   <span class="font-bold text-xl">IOT</span>
+                                   <svg class="w-6 h-6 absolute text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <h3 class="font-bold text-lg">???</h3>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-24 h-24 rounded-full border-2 border-gray-600 flex items-center justify-center bg-gray-800 mb-2 relative">
+                                   <span class="font-bold text-3xl">IT</span>
+                                   <svg class="w-6 h-6 absolute text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <h3 class="font-bold text-lg">???</h3>
                             </div>
                             <div class="flex flex-col items-center text-center">
                                 <div class="w-24 h-24 rounded-full border-2 border-gray-600 flex items-center justify-center bg-gray-800 mb-2 relative">
@@ -289,7 +317,7 @@
                 <p class="max-w-3xl text-lg md:text-xl leading-relaxed mb-8">Registration is open for our foundational courses. No experience needed! This is where your transformation begins.</p>
                 <div class="flex flex-col md:flex-row justify-center gap-8 w-full max-w-4xl">
                     <div class="card p-6 rounded-lg text-center flex-1">
-                        <h3 class="font-bold text-2xl cisco-blue mb-2">CCNA: Intro to Networks</h3>
+                        <h3 class="font-bold text-2xl cisco-blue mb-2">Network Essential</h3>
                         <p class="text-gray-300">The perfect starting point for a career in networking and infrastructure.</p>
                     </div>
                     <div class="card p-6 rounded-lg text-center flex-1">
@@ -419,48 +447,45 @@
                 <p class="max-w-3xl text-lg md:text-xl leading-relaxed mb-8">
                    Our training is your direct path to globally recognized <span class="cisco-blue font-semibold">Cisco Certifications</span>. This isn't just a piece of paper; it's a golden ticket, a badge of honor respected by employers worldwide.
                 </p>
-                 <img src="https://placehold.co/600x300/0d1117/00bceb?text=Certification+Badges" alt="Cisco Certification Badges" class="rounded-lg shadow-lg">
+                 <img src="assets/cert.png" alt="Cisco Certification Badges" class="rounded-lg shadow-lg">
             </section>
 
-            <!-- Slide 12: Community & Fun -->
-            <section id="slide-12" class="slide hidden-strict justify-start-padded">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Community, Collaboration & Fun</h1>
-                <p class="max-w-xl text-lg md:text-xl leading-relaxed mb-8">
-                   It's not all work! Join our community game room on Discord for fun events, study groups, and more.
-                </p>
-                <div class="bg-white p-4 rounded-lg shadow-2xl">
-                    <img src="https://placehold.co/256x256/ffffff/000000?text=Game+Room+QR" alt="Game Room QR Code">
-                </div>
-            </section>
+            
 
-             <!-- Slide 13: Acknowledgement -->
+             <!-- Slide 12: Acknowledgement -->
             <section id="slide-13" class="slide hidden-strict justify-start-padded">
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">With Special Thanks To Our Mentors</h1>
                 <div class="w-full max-w-4xl">
                     <!-- Dean -->
-                    <div class="mb-12 text-center">
-                        <img src="https://placehold.co/250x250/0d1117/00bceb?text=Dean" alt="College Dean" class="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg">
-                        <h3 class="font-bold text-3xl text-white">Dean's Name</h3>
-                        <p class="cisco-blue font-semibold text-xl">College Dean</p>
+                    <div class="mb-12 text-center team-member">
+                        <div class="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg overflow-hidden">
+                            <img src="assets/dr eman.jpg" alt="College Dean" class="w-full h-full object-cover profile-pic">
+                        </div>
+                        <h3 class="font-bold text-3xl text-white">Prof. Dr. Eman Karam</h3>
+                        
                     </div>
                     <!-- Supervisors -->
                     <div class="flex justify-center gap-12">
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Supervisor" alt="Supervisor 1" class="w-36 h-36 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-2xl text-white">Supervisor Name</h3>
-                            <p class="cisco-blue text-lg">Supervisor</p>
+                            <div class="w-36 h-36 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/dr ahmed.png" alt="Supervisor 1" class="object-fit-contain border rounded">
+                            </div>
+                            <h3 class="font-bold text-2xl text-white">Eng. Ahmed Abdallah</h3>
+                            
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Supervisor" alt="Supervisor 2" class="w-36 h-36 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-2xl text-white">Supervisor Name</h3>
-                            <p class="cisco-blue text-lg">Supervisor</p>
+                            <div class="w-36 h-36 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/dr khaled3.jpg" alt="Supervisor 2" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-2xl text-white">Dr. Khaled Abdel-Salam</h3>
+                            
                         </div>
                     </div>
                     <p class="text-gray-400 mt-12 text-xl italic">Our deepest gratitude for your invaluable guidance and support.</p>
                 </div>
             </section>
 
-             <!-- Slide 14: Team -->
+             <!-- Slide 13: Team -->
             <section id="slide-14" class="slide hidden-strict justify-start-padded">
                 <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Our Leadership & Core Team</h1>
                 <p class="text-lg text-gray-400 mb-8">The dedicated students driving our community forward.</p>
@@ -468,51 +493,78 @@
                     <!-- Top Leadership -->
                     <div class="flex justify-center gap-8 mb-12">
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/00bceb?text=Leader" alt="Community Leader" class="w-36 h-36 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg">
-                            <h3 class="font-bold text-2xl text-white">Member Name</h3>
-                            <p class="cisco-blue font-semibold text-lg">Community Leader</p>
+                            <div class="w-36 h-36 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg overflow-hidden">
+                                <img src="assets/seif.jpg" alt="Community Leader" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-2xl text-white">Seif Eldin Medhat</h3>
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/00bceb?text=Vice" alt="Vice Leader" class="w-36 h-36 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg">
-                            <h3 class="font-bold text-2xl text-white">Member Name</h3>
-                            <p class="cisco-blue font-semibold text-lg">Vice Community Leader</p>
+                            <div class="w-36 h-36 rounded-full mx-auto mb-4 border-4 border-cyan-400 shadow-lg overflow-hidden">
+                                <img src="assets/omar1.jpg" alt="Vice Leader" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-2xl text-white">Omar Ehab</h3>
                         </div>
                     </div>
                     <!-- Department Leads & Core Members -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Marketing Lead</p>
+                            <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/mostafa.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Mustafa Hany</h3>
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Management Lead</p>
+                             <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/magdy.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Magdy Hussein</h3>
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Presentation Lead</p>
+                             <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/juma.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Jumana Ahmed</h3>
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Teaching Lead</p>
+                            <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/menna.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Menna Wael</h3>
                         </div>
                         <div class="text-center team-member">
-                            <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Core Team Member</p>
+                            <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/rawan.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Rawan Khaled</h3>
                         </div>
                         <div class="text-center team-member">
-                           <img src="https://placehold.co/200x200/0d1117/c9d1d9?text=Member" alt="Team Member" class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600">
-                            <h3 class="font-bold text-lg text-white">Member Name</h3>
-                            <p class="cisco-blue text-sm">Core Team Member</p>
+                             <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/rilas.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Rilas Darwish</h3>
+                        </div>
+                        <div class="text-center team-member">
+                           <div class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-600 overflow-hidden">
+                                <img src="assets/men.jpg" alt="Team Member" class="w-full h-full object-cover profile-pic">
+                            </div>
+                            <h3 class="font-bold text-lg text-white">Mennatollah Ashraf</h3>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            <!-- Slide 14: Community & Fun -->
+            <section id="slide-12" class="slide hidden-strict justify-start-padded">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Community, Collaboration & Fun</h1>
+                <p class="max-w-xl text-lg md:text-xl leading-relaxed mb-8">
+                   It's not all work! Join our community game room on Discord for fun events, study groups, and more.
+                </p>
+                <div class="bg-white p-4 rounded-lg shadow-2xl">
+                    <img src="assets/qr.png" alt="Game Room QR Code">
+                </div>
+            </section>
+
 
             <!-- Slide 15: Join Us -->
             <section id="slide-15" class="slide hidden-strict justify-start-padded">
@@ -521,7 +573,7 @@
                    Don't wait for the future, build it. Scan the QR code to join our official WhatsApp community.
                 </p>
                 <div class="bg-white p-4 rounded-lg shadow-2xl">
-                    <img src="https://placehold.co/256x256/ffffff/000000?text=WhatsApp+QR" alt="WhatsApp QR Code">
+                    <img src="assets/whats.svg" alt="WhatsApp QR Code">
                 </div>
             </section>
 
